@@ -23,7 +23,7 @@ class Whistle::Sender
     http.use_ssl = @config.secure?
 
     response = begin
-                 http.post(url.path, params.to_json, HEADERS)
+                 http.post(url.path, params.to_json, HEADERS.merge({'X-Whistle-API-Key', @config.api_key}))
                rescue TimeoutError => e
                  nil
                end

@@ -6,6 +6,7 @@ class Whistle::Configuration
   class Incomplete < Exception; end
 
   attr_accessor :account_key
+  attr_accessor :application_key
   attr_accessor :api_key
   attr_accessor :host
   attr_accessor :secure
@@ -41,7 +42,7 @@ class Whistle::Configuration
   end
 
   def valid?
-    environment_name && account_key && api_key ? true : false
+    environment_name && application_key && account_key && api_key ? true : false
   end
 
   def development?
