@@ -2,7 +2,7 @@ require 'net/http'
 require 'net/https'
 
 class Whistle::Sender
-  URL_TEMPLATE = "%s/%s/%s"
+  URL_TEMPLATE = "%s%s/%s"
 
   HEADERS = {
     'Content-type'             => 'application/json',
