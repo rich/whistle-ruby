@@ -38,7 +38,7 @@ class Whistle::Configuration
 
   def default_url
     raise Incomplete unless valid?
-    URL_TEMPLATE % [protocol, api_key, account_key, api_version, host]
+    URL_TEMPLATE % [protocol, application_key, account_key, api_version, host]
   end
 
   def valid?
