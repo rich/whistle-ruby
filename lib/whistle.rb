@@ -3,12 +3,12 @@ module Whistle
   autoload :Sender,         'whistle/sender'
   autoload :Queuer,         'whistle/queuer'
 
-  attr_accessor :configuration
-
   class << self
-    def configure(&block)
+    attr_accessor :configuration
+
+    def configure
       self.configuration  ||= Configuration.new
-      self.configuration.instance_eval(&block)
+      yield(self.configuration)
     end
 
     def queuer

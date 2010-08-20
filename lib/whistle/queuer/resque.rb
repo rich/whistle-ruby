@@ -6,6 +6,6 @@ class Whistle::Queuer::Resque < Whistle::Queuer
   end
 
   def self.perform(source, action, params)
-    Whistle.sender.notify(source, action, params)
+    Whistle.sender.send_to_whistle(source, action, params)
   end
 end
