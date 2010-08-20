@@ -5,12 +5,12 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "whistle-ruby"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
-    gem.email = "rich.cavanaugh@tycoonresearch.com"
+    gem.summary = %Q{Whistle notifier for Ruby}
+    gem.description = %Q{Whistle notifier for Ruby}
+    gem.email = "rich@withoutscope.com"
     gem.homepage = "http://github.com/rich/whistle-ruby"
     gem.authors = ["Rich Cavanaugh"]
-    gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
+    gem.add_development_dependency "shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
